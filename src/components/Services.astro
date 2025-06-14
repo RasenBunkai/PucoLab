@@ -1,0 +1,60 @@
+---
+import Globe from "./svg/Globe.astro";
+import Code from "./svg/Code.astro";
+import DataBase from "./svg/DataBase.astro";
+import Rocket from "./svg/Rocket.astro";
+
+const ServiceItems = [
+  {
+    icon: Globe,
+    title: "Desarrollo Web",
+    description:
+      "Creamos sitios web y aplicaciones web modernas, responsivas y optimizadas para buscadores.",
+  },
+  {
+    icon: Code,
+    title: "Sistemas Personalizados",
+    description:
+      "Desarrollamos software a medida que se adapta perfectamente a las necesidades específicas de tu negocio.",
+  },
+  {
+    icon: DataBase,
+    title: "Integración de APIs",
+    description:
+      "Conectamos tus sistemas con servicios externos para automatizar procesos y mejorar la eficiencia.",
+  },
+  {
+    icon: Rocket,
+    title: "Optimización de Rendimiento",
+    description:
+      "Mejoramos la velocidad y eficiencia de tus aplicaciones existentes para una mejor experiencia de usuario.",
+  },
+];
+---
+
+<section id="Servicios" class="py-16 md:py-24 bg-puco-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Nuestros Servicios
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        Ofrecemos soluciones tecnológicas completas para ayudarte a alcanzar tus
+        objetivos de negocio
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        ServiceItems.map(({icon: Icon, title, description}) => (
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="mb-4">
+              <Icon className="size-14 text-puco-800"/>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">{title}</h3>
+            <p class="text-gray-600">{description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

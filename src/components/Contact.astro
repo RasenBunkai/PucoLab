@@ -1,0 +1,143 @@
+---
+import Mail from "./svg/Mail.astro";
+import Phone from "./svg/Phone.astro";
+import MapPing from "./svg/MapPing.astro";
+---
+
+<section id="contacto" class="py-16 md:py-24 bg-puco-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Contáctanos</h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        ¿Tienes un proyecto en mente? Estamos listos para ayudarte a hacerlo
+        realidad.
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-6 text-puco-800">
+          Envíanos un mensaje
+        </h3>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-puco-700 mb-1"
+                >Nombre</label
+              >
+              <input
+                id="name"
+                name="name"
+                placeholder="Tu nombre"
+                required
+                type="text"
+                class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-puco-700 mb-1"
+                >Email</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="tu@email.com"
+                required
+                class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="subject"
+              class="block text-sm font-medium text-puco-700 mb-1">Asunto</label
+            >
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="¿En qué podemos ayudarte?"
+              required
+              class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+            />
+          </div>
+
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-puco-700 mb-1"
+              >Mensaje</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Cuéntanos sobre tu proyecto..."
+              required
+              class="bg-gray-50 w-full min-h-40 max-h-48 border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-gradient-to-br from-puco-800 via-puco-700 to-puco-900 hover:via-puco-600 hover:to-puco-950 text-white py-3 rounded font-semibold transition-colors duration-300 cursor-pointer">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+      <!-- INFORMACIÓN DE CONTACTO -->
+      <div class="flex flex-col justify-between">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold mb-6 text-puco-800">
+            Información de contacto
+          </h3>
+          <div class="flex items-center gap-4">
+            <Mail className="h-6 w-6 text-puco-800" />
+            <div>
+              <div class="font-bold text-puco-900">Email</div>
+              <span class="text-gray-500 font-medium"
+                >contacto@pucolabs.com</span
+              >
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <Phone className="h-6 w-6 text-puco-800" />
+            <div>
+              <div class="font-bold text-puco-900">Teléfono</div>
+              <span class="text-gray-500 font-medium">+34 123 456 789</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <MapPing className="h-6 w-6 text-puco-800" />
+            <div>
+              <div class="font-bold text-puco-900">Ubicación</div>
+              <span class="text-gray-500 font-medium">Cancún, Quintana Roo</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-8 p-6 bg-gradient-to-tr from-puco-800 via-puco-700 to-puco-900 text-white rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-2">¿Prefieres una llamada?</h4>
+          <p class="mb-4">
+            Agenda una llamada gratuita de 30 minutos para discutir tu proyecto.
+          </p>
+          <a
+            href="https://wa.me/+34123456789"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-center w-full px-2 bg-white text-puco-800 hover:bg-puco-100 font-semibold py-2 rounded transition">
+            Agendar llamada
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<footer class="bg-puco-900 text-white py-8">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <a href="/" class="flex items-center space-x-2">
+          <div
+            class="h-8 w-8 rounded-md bg-white flex items-center justify-center">
+            <Image
+              src="/PucoLab.png"
+              alt="PucoLab"
+              width={36}
+              height={36}
+              loading="lazy"
+              class="size-9"
+              draggable="false"
+            />
+          </div>
+          <span class="font-bold text-xl">pucoLabs</span>
+        </a>
+      </div>
+
+      <div class="flex space-x-4 mb-4 md:mb-0">
+        <!-- <SocialIcon icon={(<Facebook size={18} />)} />
+        <SocialIcon icon={(<Twitter size={18} />)} />
+        <SocialIcon icon={(<Instagram size={18} />)} />
+        <SocialIcon icon={(<Linkedin size={18} />)} /> -->
+      </div>
+
+      <div class="text-sm">
+        © pucoLabs. Todos los derechos reservados.
+      </div>
+    </div>
+  </div>
+</footer>

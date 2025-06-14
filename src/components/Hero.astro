@@ -1,0 +1,61 @@
+---
+import Image from "astro/components/Image.astro";
+import Arrow from "./svg/Arrow.astro"
+---
+
+<section
+  id="Inicio"
+  class="bg-gradient-to-br from-puco-900 via-puco-800 to-puco-950 text-white py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 space-y-6 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Desarrollamos software <span class="text-puco-300">a la medida</span>
+        </h1>
+        <p class="text-lg md:text-xl text-puco-100">
+          Soluciones tecnológicas personalizadas para impulsar tu negocio al
+          siguiente nivel
+        </p>
+        <div class="pt-4">
+          <a
+            href="#contacto"
+            class="inline-flex items-center bg-white text-puco-800 px-6 py-3 rounded-md font-medium hover:bg-puco-100 transition-colors">
+            Hablemos de tu proyecto
+            <Arrow className="mx-1 size-6"/>
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative w-full max-w-md">
+          <div
+            class="absolute inset-0 bg-puco-600 rounded-lg transform rotate-3">
+          </div>
+          <div class="relative bg-white p-6 rounded-lg shadow-xl">
+            <div
+              class="aspect-[4/3] bg-puco-100 rounded-md flex items-center justify-center">
+              <div class="text-center p-4">
+                <div class="flex justify-center">
+                  <div
+                    class="flex items-center justify-center">
+                    <Image
+                      src="/PucoLab.png"
+                      alt="PucoLab"
+                      width={36}
+                      height={36}
+                      loading="eager"
+                      draggable="false"
+                      class="size-20"
+                    />
+                  </div>
+                </div>
+                <p class="mt-4 text-puco-800 font-medium">
+                  Código limpio. Diseño elegante. Resultados efectivos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
