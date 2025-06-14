@@ -38,5 +38,5 @@ npm install
 
 ## 🎨 Diseño y Colores
 
-> [! IMPORTANT]
+> [!IMPORTANT]
 > Este sitio utiliza una paleta personalizada basada en OKLCH (--color-puco-*) definida en src/styles/global.css, lo cual garantiza accesibilidad y fidelidad visual en distintos dispositivos.
