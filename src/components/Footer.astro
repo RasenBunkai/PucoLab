@@ -2,13 +2,14 @@
 import Image from "astro/components/Image.astro";
 ---
 
-<footer class="bg-puco-900 text-white py-8">
+<footer
+  class="bg-gradient-to-br from-puco-900 via-puco-800 to-puco-950 text-white py-8 tracking-tight text-pretty">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
         <a href="/" class="flex items-center space-x-2">
           <div
-            class="h-8 w-8 rounded-md bg-white flex items-center justify-center">
+            class="size-10 rounded-full bg-white flex items-center justify-center">
             <Image
               src="/PucoLab.png"
               alt="PucoLab"
@@ -19,7 +20,7 @@ import Image from "astro/components/Image.astro";
               draggable="false"
             />
           </div>
-          <span class="font-bold text-xl">pucoLabs</span>
+          <span class="font-bold text-xl">pucoLab</span>
         </a>
       </div>
 
@@ -30,9 +31,7 @@ import Image from "astro/components/Image.astro";
         <SocialIcon icon={(<Linkedin size={18} />)} /> -->
       </div>
 
-      <div class="text-sm">
-        © pucoLabs. Todos los derechos reservados.
-      </div>
+      <div class="text-sm">© pucoLab</div>
     </div>
   </div>
 </footer>

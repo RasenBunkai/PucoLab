@@ -4,11 +4,13 @@ import Phone from "./svg/Phone.astro";
 import MapPing from "./svg/MapPing.astro";
 ---
 
-<section id="contacto" class="py-16 md:py-24 bg-puco-50">
+<section
+  id="contacto"
+  class="py-16 md:py-24 bg-puco-50 tracking-tight text-pretty">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Contáctanos</h2>
-      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-puco-900">Contáctanos</h2>
+      <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
         ¿Tienes un proyecto en mente? Estamos listos para ayudarte a hacerlo
         realidad.
       </p>
@@ -98,7 +100,7 @@ import MapPing from "./svg/MapPing.astro";
             Información de contacto
           </h3>
           <div class="flex items-center gap-4">
-            <Mail className="h-6 w-6 text-puco-800" />
+            <Mail className="size-6 text-puco-800" />
             <div>
               <div class="font-bold text-puco-900">Email</div>
               <span class="text-gray-500 font-medium"
@@ -107,14 +109,14 @@ import MapPing from "./svg/MapPing.astro";
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <Phone className="h-6 w-6 text-puco-800" />
+            <Phone className="size-6 text-puco-800" />
             <div>
               <div class="font-bold text-puco-900">Teléfono</div>
               <span class="text-gray-500 font-medium">+34 123 456 789</span>
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <MapPing className="h-6 w-6 text-puco-800" />
+            <MapPing className="size-6 text-puco-800" />
             <div>
               <div class="font-bold text-puco-900">Ubicación</div>
               <span class="text-gray-500 font-medium">Cancún, Quintana Roo</span
@@ -129,13 +131,21 @@ import MapPing from "./svg/MapPing.astro";
           <p class="mb-4">
             Agenda una llamada gratuita de 30 minutos para discutir tu proyecto.
           </p>
-          <a
+            <a
             href="https://wa.me/+34123456789"
             target="_blank"
             rel="noopener noreferrer"
-            class="block text-center w-full px-2 bg-white text-puco-800 hover:bg-puco-100 font-semibold py-2 rounded transition">
-            Agendar llamada
-          </a>
+            class="relative group inline-flex items-center justify-center overflow-hidden w-full h-10 bg-white text-puco-800 hover:bg-puco-50 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            aria-label="Agendar llamada">
+            <span
+              class="group-hover:opacity-0 group-hover:-translate-y-full opacity-100 transform transition-all duration-300 absolute flex items-center justify-center w-full h-full">
+              Agendar llamada
+            </span>
+            <span
+              class="opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center size-9">
+              <Phone class=" text-puco-800"/>
+            </span>
+            </a>
         </div>
       </div>
     </div>

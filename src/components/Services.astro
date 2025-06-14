@@ -35,22 +35,25 @@ const ServiceItems = [
 <section id="Servicios" class="py-16 md:py-24 bg-puco-50">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-puco-950 tracking-tight text-pretty">
         Nuestros Servicios
       </h2>
-      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+      <p
+        class="mt-4 text-lg text-gray-900 max-w-2xl mx-auto tracking-tight text-pretty">
         Ofrecemos soluciones tecnológicas completas para ayudarte a alcanzar tus
         objetivos de negocio
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 tracking-tight text-pretty">
       {
         ServiceItems.map(({icon: Icon, title, description}) => (
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100">
             <div class="mb-4">
-              <Icon className="size-14 text-puco-800"/>
+              <Icon className="size-14 text-puco-800" />
             </div>
-            <h3 class="text-xl font-bold mb-2 text-gray-900">{title}</h3>
+            <h3 class="text-xl font-semibold mb-2 text-puco-900">{title}</h3>
             <p class="text-gray-600">{description}</p>
           </div>
         ))
