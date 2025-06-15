@@ -1,0 +1,75 @@
+---
+import Image from "astro/components/Image.astro";
+const logos = [
+  {src: "/logos/astro_dark.svg", alt: "AstroJS Logo"},
+  {src: "/logos/react_dark.svg", alt: "ReactJS Logo"},
+  {src: "/logos/vercel.svg", alt: "Vercel Logo"},
+  {src: "/logos/netlify.svg", alt: "Netlify Logo"},
+  {src: "/logos/tailwindcss.svg", alt: "TailwindCSS Logo"},
+  {src: "/logos/laravel.svg", alt: "Laravel Logo"},
+  {src: "/logos/supabase.svg", alt: "Supabase Logo"},
+];
+---
+
+<section
+  id="stack"
+  class="bg-puco-50 relative w-full text-center px-4 py-20 sm:py-24 overflow-hidden">
+  <div class="container mx-auto max-w-7xl">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-puco-900 tracking-tight mb-12">
+      Usamos las mejores tecnologías del mercado
+    </h2>
+    <div class="relative">
+      <div
+        class="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-puco-50 to-transparent">
+      </div>
+      <div class="w-full overflow-hidden">
+        <div class="flex gap-12 py-4 animate-slide-logos">
+          {
+            logos.concat(logos).map((logo, index) => (
+              <div class="flex-shrink-0">
+                <div class="aspect-square flex items-center justify-center size-24 p-4 transition-all duration-300 hover:-translate-y-1">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                    class="object-contain w-full h-full transition-all duration-500"
+                    draggable="false"
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div
+        class="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-puco-50 to-transparent">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  @keyframes slide-logos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slide-logos {
+    animation: slide-logos 30s linear infinite;
+  }
+
+  @media (prefers-reduced-motion) {
+    .animate-slide-logos {
+      animation: none;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+</style>

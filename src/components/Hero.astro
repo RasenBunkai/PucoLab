@@ -5,12 +5,11 @@ import Arrow from "./svg/Arrow.astro";
 
 <section
   id="Inicio"
-  class="bg-gradient-to-br from-puco-900 via-puco-800 to-puco-950 text-white py-16 md:py-24 tracking-tight text-pretty">
+  class="h-dvh bg-gradient-to-br from-puco-900 via-puco-800 to-puco-950 text-white py-16 md:py-24 tracking-tight text-pretty">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 space-y-6 mb-10 md:mb-0">
-        <h1
-          class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           Desarrollamos software <span
             class="bg-gradient-to-br from-puco-300 via-puco-100 to-puco-500 bg-clip-text text-transparent"
             >a la medida</span
@@ -23,10 +22,10 @@ import Arrow from "./svg/Arrow.astro";
         <div class="pt-4">
           <a
             href="#contacto"
-            class="group inline-flex items-center bg-white text-puco-800 px-6 py-3 rounded-md font-medium hover:bg-puco-100 transition-all relative animate-pulse-ping hover:scale-105 duration-300">
+            class="group inline-flex items-center bg-white text-puco-800 px-6 py-3 rounded-full font-medium hover:bg-puco-100 transition-all relative animate-pulse-ping hover:scale-105 duration-300">
             Hablemos de tu proyecto
             <span
-              class="absolute inset-0 rounded-md border-2 border-white animate-ping pointer-events-none"
+              class="absolute inset-0 rounded-full border-2 border-white animate-ping pointer-events-none"
             ></span>
             <Arrow
               className="mx-1 size-6 group-hover:translate-x-2 duration-300 transition"
@@ -34,34 +33,19 @@ import Arrow from "./svg/Arrow.astro";
           </a>
         </div>
       </div>
-      <div class="group md:w-1/2 flex justify-center mx-2">
-        <div class="relative w-full max-w-md">
-          <div
-            class="group-hover:rotate-1 duration-300 transition absolute inset-0 bg-puco-600 rounded-lg transform rotate-6">
-          </div>
-          <div class="relative bg-white p-6 rounded-lg shadow-xl">
-            <div
-              class="aspect-[4/3] bg-puco-100 rounded-md flex items-center justify-center">
-              <div class="text-center p-4">
-                <div class="flex justify-center">
-                  <div class="flex items-center justify-center">
-                    <Image
-                      src="/PucoLab.png"
-                      alt="PucoLab"
-                      width={36}
-                      height={36}
-                      loading="eager"
-                      draggable="false"
-                      class="size-20"
-                    />
-                  </div>
-                </div>
-                <p class="mt-4 text-puco-800 font-medium">
-                  Código limpio. Diseño elegante. Resultados efectivos.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="w-full md:w-[60%] flex justify-center md:justify-end">
+        <div
+          class="relative w-full max-w-[300px] mx-auto md:max-w-2xl md:-mr-8 lg:-mr-16 xl:-mr-24">
+          <Image
+            src="/624shots_so.png"
+            alt="PucoLab"
+            width={1352}
+            height={1440}
+            loading="eager"
+            draggable="false"
+            sizes="(max-width: 767px) 300px, (min-width: 768px) 800px"
+            class="mask-r-[100%_100%] mask-r-from-90% mask-radial-at-left w-full h-auto object-contain"
+          />
         </div>
       </div>
     </div>

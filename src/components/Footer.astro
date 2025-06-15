@@ -1,12 +1,22 @@
 ---
 import Image from "astro/components/Image.astro";
+import Twitter from "./svg/Twitter.astro";
+import Arrow from "./svg/Arrow.astro";
+
+const links = [
+  {link: "#Servicios", label: "Servicios", icon: Arrow},
+  {link: "#Equipo", label: "Equipo", icon: Arrow},
+  {link: "#Contacto", label: "Contacto", icon: Arrow},
+];
 ---
+
+<!-- class="" -->
 <footer
   class="bg-gradient-to-br from-puco-900 via-puco-800 to-puco-950 text-white py-8 tracking-tight text-pretty">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-4 md:mb-0">
-        <a href="/" class="flex items-center space-x-2">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
           <div
             class="size-10 rounded-full bg-white flex items-center justify-center">
             <Image
@@ -19,16 +29,63 @@ import Image from "astro/components/Image.astro";
               draggable="false"
             />
           </div>
-          <span class="font-bold text-xl">pucoLab</span>
-        </a>
+          <h3 class="text-xl font-semibold">PucoLab</h3>
+        </div>
+        <p class="mb-6 max-w-md">
+          Desarrollo de software a la medida. Creamos soluciones digitales
+          modernas para impulsar tu negocio.
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="https://x.com/pucolab"
+            target="_blank"
+            aria-label="Twitter"
+            class="group size-10 flex items-center justify-center">
+            <Twitter class="group-hover:-translate-y-1 transition size-5" />
+          </a>
+        </div>
       </div>
-      <div class="flex space-x-4 mb-4 md:mb-0">
-        <!-- <SocialIcon icon={(<Facebook size={18} />)} />
-        <SocialIcon icon={(<Twitter size={18} />)} />
-        <SocialIcon icon={(<Instagram size={18} />)} />
-        <SocialIcon icon={(<Linkedin size={18} />)} /> -->
+      <div class="md:col-start-4">
+        <h4 class="text-lg font-semibold mb-4 text-gray-600 dark:text-white">
+          Enlaces Rápidos
+        </h4>
+        <ul class="space-y-2">
+          {
+            links.map(({link, label, icon: Icon}) => (
+              <li>
+                <a
+                  href={link}
+                  class="group flex items-center gap-1 text-white text-sm">
+                  {label}
+                  <span class="ml-2 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    {Icon && (
+                      <Icon className="group-hover:-rotate-45 size-4 transform transition-transform duration-200" />
+                    )}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
-      <div class="text-sm">© pucoLab</div>
+    </div>
+    <div class="border-t border-white mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span>© 2025 PucoLab.</span>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="#" class="hover:-translate-y-1 transition duration-300">
+            Términos de Servicio
+          </a>
+          <a href="#" class="hover:-translate-y-1 transition duration-300">
+            Política de Privacidad
+          </a>
+          <a href="#" class="hover:-translate-y-1 transition duration-300">
+            FAQ
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

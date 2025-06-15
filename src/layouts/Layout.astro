@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 const {title} = Astro.props;
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -10,10 +11,20 @@ const {title} = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/PucoLab.png" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="pucoLabs - Desarrollo de software a la medida. Creamos soluciones digitales modernas para impulsar tu negocio."
+    />
+    <meta
+      name="keywords"
+      content="software a medida, desarrollo web, soluciones tecnológicas, pucoLabs"
+    />
+    <meta name="author" content="pucoLabs" />
     <title>PucoLab {title}</title>
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 
