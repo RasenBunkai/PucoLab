@@ -9,52 +9,57 @@ const ServiceItems = [
     icon: Globe,
     title: "Desarrollo Web",
     description:
-      "Creamos sitios web y aplicaciones web modernas, responsivas y optimizadas para buscadores.",
+      "Creamos sitios y aplicaciones modernas, responsivas y optimizadas para buscadores.",
   },
   {
     icon: Code,
     title: "Sistemas Personalizados",
     description:
-      "Desarrollamos software a medida que se adapta perfectamente a las necesidades específicas de tu negocio.",
+      "Desarrollamos software a medida que se adapta a las necesidades de tu negocio.",
   },
   {
     icon: DataBase,
     title: "Integración de APIs",
     description:
-      "Conectamos tus sistemas con servicios externos para automatizar procesos y mejorar la eficiencia.",
+      "Conectamos tus sistemas con servicios externos para automatizar procesos.",
   },
   {
     icon: Rocket,
     title: "Optimización de Rendimiento",
     description:
-      "Mejoramos la velocidad y eficiencia de tus aplicaciones existentes para una mejor experiencia de usuario.",
+      "Mejoramos la velocidad y eficiencia de tus aplicaciones para una mejor experiencia.",
   },
 ];
 ---
 
-<section id="Servicios" class="py-16 md:py-24 bg-puco-50">
-  <div class="container mx-auto px-4 max-w-7xl">
-    <div class="text-center mb-12">
-      <h2
-        class="text-3xl md:text-4xl font-bold text-puco-950 tracking-tight text-pretty">
+<section
+  id="Servicios"
+  class="py-16 md:py-24 bg-gradient-to-tr from-puco-900 via-puco-700 to-puco-950">
+  <div
+    class="container mx-auto px-4 max-w-7xl bg-white/10 backdrop-blur-md border border-white/30 p-6 md:p-12 rounded-4xl shadow-lg shadow-puco-500/30">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-6xl font-extrabold text-white tracking-tight">
         Nuestros Servicios
       </h2>
-      <p
-        class="mt-4 text-lg text-gray-900 max-w-2xl mx-auto tracking-tight text-pretty">
-        Ofrecemos soluciones tecnológicas completas para ayudarte a alcanzar tus
-        objetivos de negocio
+      <p class="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
+        Soluciones tecnológicas completas para alcanzar tus objetivos de
+        negocio.
       </p>
     </div>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 tracking-tight text-pretty">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {
         ServiceItems.map(({icon: Icon, title, description}) => (
-          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="bg-white/70 hover:bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg hover:shadow-white/30 transition-all duration-300 hover:-translate-y-2">
             <div class="mb-4">
-              <Icon className="size-14 text-puco-800" />
+              <Icon className="w-14 h-14 text-puco-800" aria-hidden="true" />
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-puco-900">{title}</h3>
-            <p class="text-gray-600">{description}</p>
+            <h3 class="text-xl font-semibold text-puco-950 mb-2 pointer-events-none">
+              {title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed pointer-events-none">
+              {description}
+            </p>
           </div>
         ))
       }
