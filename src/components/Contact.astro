@@ -6,18 +6,22 @@ import MapPing from "./svg/MapPing.astro";
 
 <section
   id="contacto"
-  class="py-16 md:py-24 bg-puco-50 tracking-tight text-pretty">
+  class="bg-gradient-to-br from-puco-900 via-puco-700 to-puco-950 py-16 md:py-24 tracking-tight text-pretty">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-puco-900">Contáctanos</h2>
-      <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+      <h2
+        class="text-3xl md:text-6xl font-bold bg-gradient-to-br from-puco-300 via-puco-100 to-puco-400 bg-clip-text text-transparent">
+        Contáctanos
+      </h2>
+      <p class="mt-4 text-2xl text-puco-100/90 max-w-2xl mx-auto">
         ¿Tienes un proyecto en mente? Estamos listos para ayudarte a hacerlo
         realidad.
       </p>
     </div>
 
     <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-      <div class="bg-white p-8 rounded-lg shadow-md">
+      <div
+        class="bg-white/70 hover:bg-white/80 backdrop-blur-md shadow-lg hover:shadow-white/30 p-8 rounded-lg transition-all duration-300">
         <h3 class="text-2xl font-bold mb-6 text-puco-800">
           Envíanos un mensaje
         </h3>
@@ -35,7 +39,7 @@ import MapPing from "./svg/MapPing.astro";
                 placeholder="Tu nombre"
                 required
                 type="text"
-                class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+                class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
               />
             </div>
             <div>
@@ -50,7 +54,7 @@ import MapPing from "./svg/MapPing.astro";
                 type="email"
                 placeholder="tu@email.com"
                 required
-                class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+                class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
               />
             </div>
           </div>
@@ -66,7 +70,7 @@ import MapPing from "./svg/MapPing.astro";
               type="text"
               placeholder="¿En qué podemos ayudarte?"
               required
-              class="bg-gray-50 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+              class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
             />
           </div>
 
@@ -81,7 +85,7 @@ import MapPing from "./svg/MapPing.astro";
               name="message"
               placeholder="Cuéntanos sobre tu proyecto..."
               required
-              class="bg-gray-50 w-full min-h-40 max-h-48 border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
+              class="bg-gray-50/70 w-full min-h-40 max-h-48 border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
             ></textarea>
           </div>
 
@@ -95,7 +99,7 @@ import MapPing from "./svg/MapPing.astro";
 
       <!-- INFORMACIÓN DE CONTACTO -->
       <div class="flex flex-col justify-between">
-        <div class="space-y-6">
+        <div class="space-y-6 bg-white/70 p-6 rounded-2xl">
           <h3 class="text-2xl font-bold mb-6 text-puco-800">
             Información de contacto
           </h3>
@@ -126,12 +130,12 @@ import MapPing from "./svg/MapPing.astro";
         </div>
 
         <div
-          class="mt-8 p-6 bg-gradient-to-tr from-puco-800 via-puco-700 to-puco-900 text-white rounded-lg shadow-md">
+          class="mt-8 p-6 border border-white/20 bg-gradient-to-tr from-puco-800 via-puco-700 to-puco-900 text-white rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-2">¿Prefieres una llamada?</h4>
           <p class="mb-4">
             Agenda una llamada gratuita de 30 minutos para discutir tu proyecto.
           </p>
-            <a
+          <a
             href="https://wa.me/+34123456789"
             target="_blank"
             rel="noopener noreferrer"
@@ -143,9 +147,9 @@ import MapPing from "./svg/MapPing.astro";
             </span>
             <span
               class="opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 flex items-center justify-center size-9">
-              <Phone class=" text-puco-800"/>
+              <Phone class="text-puco-800" />
             </span>
-            </a>
+          </a>
         </div>
       </div>
     </div>
