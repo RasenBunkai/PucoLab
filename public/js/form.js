@@ -1,5 +1,5 @@
 
-import {supabase} from "../lib/supabase";
+import {supabase} from "../../src/lib/supabase";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
