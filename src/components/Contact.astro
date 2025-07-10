@@ -2,6 +2,7 @@
 import Mail from "./svg/Mail.astro";
 import Phone from "./svg/Phone.astro";
 import MapPing from "./svg/MapPing.astro";
+import ContactForm from "./ContactForm.astro";
 ---
 
 <section
@@ -24,76 +25,7 @@ import MapPing from "./svg/MapPing.astro";
         <h3 class="text-2xl font-bold mb-6 text-puco-800">
           Envíanos un mensaje
         </h3>
-        <form class="space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label
-                for="name"
-                class="block text-sm font-medium text-puco-700 mb-1"
-                >Nombre</label
-              >
-              <input
-                id="name"
-                name="name"
-                placeholder="Tu nombre"
-                required
-                type="text"
-                class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
-              />
-            </div>
-            <div>
-              <label
-                for="email"
-                class="block text-sm font-medium text-puco-700 mb-1"
-                >Email</label
-              >
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="tu@email.com"
-                required
-                class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label
-              for="subject"
-              class="block text-sm font-medium text-puco-700 mb-1">Asunto</label
-            >
-            <input
-              id="subject"
-              name="subject"
-              type="text"
-              placeholder="¿En qué podemos ayudarte?"
-              required
-              class="bg-gray-50/70 w-full border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
-            />
-          </div>
-
-          <div>
-            <label
-              for="message"
-              class="block text-sm font-medium text-puco-700 mb-1"
-              >Mensaje</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Cuéntanos sobre tu proyecto..."
-              required
-              class="bg-gray-50/70 w-full min-h-40 max-h-48 border border-puco-800 py-1 px-1.5 rounded focus:border-puco-500 outline-none focus:ring-1 focus:ring-puco-600"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full bg-gradient-to-br from-puco-800 via-puco-700 to-puco-900 hover:via-puco-600 hover:to-puco-950 text-white py-3 rounded-full hover:scale-105 font-semibold transition-all duration-300 cursor-pointer">
-            Enviar mensaje
-          </button>
-        </form>
+        <ContactForm />
       </div>
 
       <!-- INFORMACIÓN DE CONTACTO -->
